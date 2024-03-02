@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project2.NewPage2"
+             Title="Kompas">
+    <ScrollView>
+        <VerticalStackLayout Padding="40">
+            <Label Text="Kompas" FontSize="30" HorizontalTextAlignment="Center" Margin="0,0,0,20" ></Label>
+            <Image Source="compas.png" Aspect="AspectFit" IsVisible="false" x:Name="compassImage" Rotation="{Binding Heading}"></Image>
+            <Label Text="" x:Name="lblInfo" FontSize="20" Margin="20,0,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

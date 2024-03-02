@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project2.NewPage1"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Pogoda">
+    <ScrollView>
+        <VerticalStackLayout x:Name="mainContainer" Padding="20">
+            <Button Text="Wczytaj dane pogodowe" Clicked="GetWeatherData" Margin="0,0,0,20"  x:Name="loadingButton"></Button>
+            <ActivityIndicator x:Name="loadingProgress" IsVisible="false" Color="Red"></ActivityIndicator>
+            <StackLayout x:Name="weather_info" IsVisible="false">
+                <Label x:Name="lblDay" FontSize="16"></Label>
+                <Label x:Name="lblWeatherState" FontSize="30"></Label>
+                <VerticalStackLayout>
+                    <HorizontalStackLayout>
+                        <Image Source="termometer_icon.png" WidthRequest="50"></Image>
+                        <Label x:Name="lblTemperature" FontSize="50"></Label>
+                    </HorizontalStackLayout>
+                    <Label x:Name="lblTemperatureMin" Margin="0,0,0,20"></Label>
+                    <HorizontalStackLayout>
+                        <Image Source="wind_icon.png" WidthRequest="30"></Image>
+                        <Label x:Name="lblWind" FontSize="30"></Label>
+                    </HorizontalStackLayout>
+                    <Label x:Name="lblWindGusts"></Label>
+                    <Label x:Name="lblWindDirection" Margin="0,0,0,20"></Label>
+                    <HorizontalStackLayout>
+                        <Image Source="rain_icon.png" WidthRequest="30"></Image>
+                        <Label x:Name="lblRain" FontSize="30"></Label>
+                    </HorizontalStackLayout>
+                    <Label x:Name="lblSunrise"></Label>
+                    <Label x:Name="lblSunset"></Label>
+                    <Label x:Name="lblDay_length"></Label>
+                </VerticalStackLayout>
+                <!--<ImageButton Source="information_icon.png" WidthRequest="40" Clicked="information_Show"></ImageButton>-->
+            </StackLayout>
+            <StackLayout x:Name="expanderContainer">
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

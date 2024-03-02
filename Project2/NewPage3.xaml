@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project2.NewPage3"
+             Title="Aktywność fizyczna">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="Rozpocznij rejestrowanie kroków" x:Name="beginBtn"></Button>
+            <Button Text="Zatrzymaj rejestrowanie kroków"  x:Name="stopBtn" IsVisible="false"></Button>
+            <Label x:Name="StepLabel"></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

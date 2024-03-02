@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Project2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Project2"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="DarkSlateGray">
+            <Label Text="Aplikacja mobilna" FontSize="20" Padding="20,30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="WhiteSmoke"></Label>
+        </Grid>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="Pogoda"
+                Icon="termometer_icon.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:NewPage1}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Kompas"
+                Icon="compass.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:NewPage2}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Liczenie kroków"
+            Icon="steps_icon.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:NewPage3}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Informacje"
+            Icon="information_icon.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:NewPage4}" />
+        </Tab>
+    </FlyoutItem>
+
+</Shell>
